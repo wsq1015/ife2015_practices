@@ -1,0 +1,236 @@
+h1{
+    color: blue;
+}
+h2{
+    font-size: 14px;
+}
+p{
+    font-size: 12px;
+    color:yellow;
+    background-color: black;
+}
+img{
+    border: 2px solid red;
+}
+/*水平居中div*/
+#divCenter{
+    width: 960px;
+    height: 500px;
+    background-color: red;
+    margin: 0 auto;
+    /* position: absolute;
+    top:50%;
+    left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    /* margin-left: -480px;
+    margin-top: -250px; */
+}
+/*不使用border-radius画圆角*/
+#divBorder{
+    overflow: hidden;
+    height: 100px;
+    margin-top: 30px;
+}
+.top2, .bottom2, .top3, .bottom3, .top4, .bottom4, .top5, .bottom5{
+    display: block;
+    height: 1px;
+    background: lightblue;
+    overflow: hidden;
+}
+.top1, .bottom1{
+    margin: 0px 5px;
+    border-top: solid 1px black;
+}
+.top2, .bottom2{
+    margin: 0px 3px;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+}
+.top3, .bottom3{
+    margin: 0px 2px;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+}
+.top4, .bottom4{
+    margin: 0px 1px;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+}
+.top5, .bottom5{
+    margin: 0px 1px;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+}
+.noBorder{
+    height: 100%;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    background: lightblue;
+}
+/*两列布局*/
+/*方法一
+.twoCol1{
+    width: 50px;
+    height: 50px;
+    background: red;
+    float: left;
+}
+.twoCol2{
+    margin-left: 50px;
+    height: 50px;
+    background: blue;
+}
+.twoCol3{
+    clear: both;
+    width: 100%;
+    height: auto;
+    background: yellow;
+}
+*/
+/*方法2*/
+.twoCol{
+    position: relative;
+    margin-top: 30px;
+}
+.twoCol1{
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.twoCol2{
+    margin-left: 50px;
+    height: 50px;
+    background: blue;
+    width: 100%;
+}
+.twoCol3{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: yellow;
+}
+/*三列布局*/
+/*方法一*/
+/* .threeCol{
+    position: relative;
+    margin-top: 30px;
+}
+.threeCol1{
+    width: 50px;
+    height: 50px;
+    background: pink;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.threeCol3{
+    width: 50px;
+    height: 50px;
+    background:blueviolet;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.threeCol2{
+    margin-left: 50px;
+    width: 100%;
+    height: 50px;
+    background:yellowgreen;
+} */
+.threeCol{
+    height: 50px;
+    margin-top: 30px;
+}
+/* .threeCol1{
+    width: 50px;
+    height: 50px;
+    background: pink;
+    float: left;
+}
+.threeCol3{
+    width: 50px;
+    height: 50px;
+    background:blueviolet;
+    float: right;
+}*/
+/*方法2 BFC*/
+/* .threeCol2{
+    height: 50px;
+    overflow: hidden;
+    background:yellowgreen;
+}  */
+/*方法3*/
+/* .threeCol2{
+    margin-left:50px; 
+    margin-right: 50px;
+    height: 50px;
+    background:yellowgreen;
+}  */
+/*方法4 双飞翼布局*/
+/* .threeCol2Middle{
+    float: left;
+    width: 100%;
+    height: 50px;
+    background: darkgoldenrod;
+}
+.threeCol2{
+    height: 50px;
+    margin: 0 50px;
+}
+.threeCol1{
+    width: 50px;
+    height: 50px;
+    background: pink;
+    float: left;
+    position: relative;
+    margin-left: -100%;
+}
+.threeCol3{
+    width: 50px;
+    height: 50px;
+    margin-left: -50px;
+    background:blueviolet;
+    float: left;
+} */
+.flex{
+    display: flex;
+    flex-flow: row;
+    margin-top:30px;
+}
+.threeCol2{
+    height: 50px;
+    flex:1;
+    background:blue;
+}
+.threeCol1{
+    width: 50px;
+    height: 50px;
+    background: pink;
+}
+.threeCol3{
+    width: 50px;
+    height: 50px;
+    background:blueviolet;
+}
+/*浮动布局*/
+.float{
+    background: red;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 30px;
+}
+.floatDiv{
+    float: left;
+    width: 100px;
+    height: 30px;
+    margin-right:10px;
+    margin-bottom: 10px;
+    background: blue;
+}

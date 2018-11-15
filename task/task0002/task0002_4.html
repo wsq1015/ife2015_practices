@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>输入提示框</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script src="task0002_4.js"></script>
+    <script src="util.js"></script>
+    <style>
+        li{
+            list-style:none;
+        }
+        .search{
+            text-align: center;
+            width: 365px;
+            margin: 100px auto;
+        }
+        #text{
+            width: 300px;
+            margin-left: 20px;
+        }
+        #searchButton{
+            padding: 2px;
+            width: 34px;
+        }
+        .active{
+            background: cadetblue;
+        }
+        .date{
+            /* height: 20px; */
+            width: 300px;   
+            margin-left:21px;
+            margin-top: -1px; 
+            padding-left: 0; 
+            border: 1px solid #000;
+            display: none;
+        }
+        .date li{
+            background:#f4f4f4;
+        }
+        .date li:hover{
+            background-color:#1f8af1;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <img src="img/baidu.gif" alt="百度">
+        <div>
+            <input type="text" id="text">
+            <input type="button" value="搜索" id="searchButton">
+            <ul class="date">
+            </ul>
+        </div>
+    </div>
+    <script>
+    var testdate=["abase","abash","abate","abduction","abhor","abominable","abscond","abstain","baby","babysiter","belt","birthday","bench","brave","你好"];
+    var text=document.getElementById('text');;
+    var oUl=document.getElementsByClassName("date")[0];
+    var oLi=document.querySelectorAll(".date li");
+    text.addEventListener("focus",function(e){//文本框点击事件
+        if(text.value=""){
+            oUl.innerHTML="";
+        }
+        else{
+
+            document.onkeydown = function (e) {
+           if(e.keyCode==40){
+               var actli=document.querySelector(".active");
+             if(actli){
+                 if(actli.nextElementSibling==null){
+                     alert("已经是最底了");
+                     return false;
+                 }
+                 actli.nextElementSibling.className="active";
+                 actli.className="";
+
+             }
+               else{
+                   var oLi=document.querySelectorAll(".date li");
+                   oLi[0].className="active";
+             }
+           };
+            if(e.keyCode==38){
+                var actli=document.querySelector(".active");
+                if(actli){
+                    if(actli.previousElementSibling==null){
+                        alert("已经是最顶了")
+                        return false;
+                    }
+                    actli.previousElementSibling.className="active";
+                    actli.className="";
+
+                }
+            }
+            if(e.keyCode==13){
+                var actli=document.querySelector(".active");
+                var val=actli.innerText;
+                text.value=val;
+                actli.className="";
+                oUl.style.display="none";
+            }
+        }//下拉栏键盘事件
+    } });
+    oUl.addEventListener("mouseover",function(e){//下拉栏鼠标移入事件
+        var actli=document.querySelector(".active");
+        if(actli){
+            actli.className="";
+        }
+    });
+    oUl.addEventListener("mouseleave",function(e){//下拉栏鼠标移出事件
+        oUl.style.display="none";
+        oUl.innerHTML=""
+    });
+    oUl.addEventListener("click",function(e){//下拉栏鼠标点击事件
+        var val=event.target.innerText;
+        text.value=val;
+        oUl.style.display="none";
+    });
+    text.oninput=check;//监听input的值
+    function check(){
+            var input=text.value;
+            if(input===""){
+                oUl.innerHTML="";
+            }
+        else{ oUl.style.display="block"
+                var result;
+                var reg= new RegExp("^" +text.value, "i");
+                result=testdate.filter(function(item){
+                    return item.match(reg);
+                });
+                var litext="";
+                for(var i=0;i<result.length;i++){
+                    litext+= "<li>"+result[i]+"</li>"
+                    oUl.innerHTML=litext;
+                }
+            }
+    }
+    </script>
+</body>
+</html>
