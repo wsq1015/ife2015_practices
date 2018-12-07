@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>个人任务管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="task0003.css" />
+    <script src="task0003.js"></script>
+</head>
+<body>
+   <div id="box">
+        <div class="head">
+            <h1 class="title">GTD Tools</h1>
+        </div>
+        <div class="content">
+            <div class="left">
+                <div class="details">
+                  <p class="tasks">所有任务<span>(10)</span></p>
+                  <p>分类列表</p>
+                <ul id="taskList">
+                    <li class="taskListLi">
+                        <img src="img/fold.jpg" alt="文件夹" class="fold">
+                        <a href="#">百度IFE项目<span>(10)</span></a>
+                        <button class="leftButton"></button>
+                        <ul class="files">
+                            <li class="selected">
+                                <img src="img/file1.jpg" alt="文件" class="file">
+                                <a href="#">task1<span>(6)</span></a>
+                            </li>
+                            <li>
+                                <img src="img/file1.jpg" alt="文件" class="file">
+                                <a href="#">task2<span>(4)</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="taskListLi">
+                        <img src="img/fold.jpg" alt="文件夹" class="fold">
+                        <a href="#">毕业设计<span>(1)</span></a>
+                        <button class="leftButton"></button>
+                        <ul class="files">
+                                <li>
+                                    <img src="img/file1.jpg" alt="文件" class="file">
+                                    <a href="#">task3<span>(1)</span></a>
+                                </li>
+                        </ul>
+                    </li>
+                    <li class="taskListLi">
+                        <img src="img/fold.jpg" alt="文件夹" class="fold">
+                        <a href="#">社团活动<span>(0)</span></a>
+                        <button class="leftButton"></button>
+                    </li>
+                    <li class="taskListLi">
+                        <img src="img/fold.jpg" alt="文件夹" class="fold">
+                        <a href="#">家庭活动<span>(0)</span></a>
+                        <button class="leftButton"></button>
+                    </li>
+                    <li class="taskListLi">
+                        <img src="img/fold.jpg" alt="文件夹" class="fold">
+                        <a href="#">默认分类<span>(0)</span></a>
+                        <button class="leftButton"></button>
+                    </li>
+                </ul>  
+                </div>
+                <div class="leftAdd">
+                   <a href="#" id="addClass"><img src="img/add.jpg" alt="新建分类">
+                    <span>新增分类</span></a> 
+                </div>
+            </div>
+            <div class="middle">
+                <div class="details">
+                    <div class="middleHead">
+                    <span id="all" class="selected">所有</span>
+                    <span id="unfinish">未完成</span>
+                    <span id="finish">已完成</span>
+                    </div>
+                    <div class="middleContent show">
+                    <ul>
+                        <p class="time">2015-04-30</p>
+                        <li>to-do 1</li>
+                        <li>to-do 2</li>
+                    </ul>
+                    <ul>
+                        <p class="time">2015-04-28</p>
+                        <li>to-do 3</li>
+                        <li>to-do 4</li>
+                    </ul>
+                    <ul>
+                        <p class="time">2015-05-04</p>
+                        <li>to-do 5</li>
+                        <li class="selected">to-do 6</li>
+                    </ul>
+                    <ul>
+                        <p class="time">2015-04-29</p>
+                        <li>to-do 7</li>
+                    </ul>
+                    </div>
+                    <div class="middleContent">
+                        <ul>
+                            <p class="time">2015-05-11</p>
+                            <li>to-do 1</li>
+                            <li>to-do 2</li>
+                        </ul>
+                        <ul>
+                            <p class="time">2015-05-09</p>
+                            <li>to-do 3</li>
+                            <li>to-do 4</li>
+                        </ul>
+                    </div>
+                    <div class="middleContent">
+                        <ul>
+                            <p class="time">2015-05-15</p>
+                            <li>to-do 1</li>
+                            <li>to-do 2</li>
+                        </ul>
+                    </div>
+                </div>      
+                <div class="middleAdd">
+                       <a href="#"><img src="img/add.jpg" alt="新增任务">
+                        <span>新增任务</span></a> 
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 1</h3>
+                        <!-- <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div>  -->
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-04-28"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 2</h3>
+                        <!-- <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div>  -->
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-04-28"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 3</h3>
+                        <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div> 
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-04-29"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 4</h3>
+                        <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div> 
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-04-29"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 5</h3>
+                        <!-- <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div>  -->
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-04-30"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="right show">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 6</h3>
+                        <!-- <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div>  -->
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-04-30"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 7</h3>
+                        <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div> 
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-05-04"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 1</h3>
+                        <!-- <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div>  -->
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-05-09"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 2</h3>
+                        <!-- <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div>  -->
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-05-09"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 3</h3>
+                        <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div> 
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-05-11"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 4</h3>
+                        <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div> 
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-05-11"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 1</h3>
+                        <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div> 
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-05-15"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3>to-do 2</h3>
+                        <div class="rightHead-img">
+                            <img src="img/ok.jpg" alt="完成任务" id="finished">
+                            <img src="img/edit.jpg" alt="编辑任务" id="editTask">
+                        </div> 
+                    </div>
+                </div>
+                <div class="rightTime">
+                    <span>任务日期:</span><input id="rightTimeday" disabled='true' type="text" value="2015-05-15"> 
+                </div>
+                <div class="rightContent">
+                    <textarea disabled="true" id="rightTextarea" cols="30" rows="10">完成task3的编码工作。</textarea> 
+                </div>
+            </div>
+            <div class="edit">
+                <div class="rightHead">
+                    <div class="rightTitle">
+                        <h3><span class="changeName">新增</span>任务窗口</h3>
+                    </div>
+                </div>
+                <div class="editContents">
+                    <div>
+                        <span>标题：</span><input type="text"  class="titletest" maxlength="10" placeholder="请输入不超过10个字符">
+                    </div>
+                    <div>
+                        <span>日期：</span><input type="text" class="daytest">
+                    </div> 
+                    <div>
+                        <span class="textArea">内容：</span><textarea name="内容" class="editTextArea" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="buttonEdit">
+                    <input type="button" value="确认" id="editCofirm">
+                    <input type="button" value="取消" id="cancel">
+                </div>
+            </div>
+            <div id="addDiv">
+                <div class="editContents">
+                    <h4>新增分类</h4><span id='addDelete'></span>
+                    <div>
+                        <span>标题：</span><input type="text" maxlength="10" placeholder="请输入不超过10个字符" class="titletest">
+                    </div>
+                    <div>
+                        <span>日期：</span><input type="text" class="daytest">
+                    </div> 
+                    <div>
+                        <span class="textArea">内容：</span><textarea name="内容" class="editTextArea" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                    <div class="buttonEdit">
+                        <input type="button" value="确认" id="addConfirm">
+                        <input type="button" value="取消" id="addCancel">
+                    </div>  
+            </div>
+        </div>
+   </div> 
+</body>
+</html>
